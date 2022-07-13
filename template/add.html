@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adding data</title>
+</head>
+<body>
+
+<h1 align="center"> ENTER YOUR DETAILS   </h1><br>
+<center>
+
+
+    <form action="saved" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+NAME: <input type="text" placeholder="Enter your name" name="name"><br><br>
+ADDRESS : <textarea cols="25" rows="5"  placeholder="Enter you Address" name="address"></textarea><br><br>
+
+<label> BLOOD GROUP:</label>
+  <select name="group">
+      <option value="O+ve">O+ve</option>
+      <option value="O-ve">O-ve</option>
+      <option value="A+ve">A+ve</option>
+      <option value="A-ve">A-ve</option>
+      <option value="B+ve">B+ve</option>
+      <option value="B-ve">B-ve</option>
+      <option value="AB+ve">AB+ve</option>
+      <option value="AB-ve">AB-ve</option>
+  </select><br>
+<br>
+    <label> DISTRICT:</label>
+  <select name="district">
+      <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+      <option value="Kollam">Kollam</option>
+      <option value="Alappuzha">Alappuzha</option>
+      <option value="Pathanamthitta">Pathanamthitta</option>
+      <option value="Kottayam">Kottayam</option>
+      <option value="Idukki">Idukki</option>
+      <option value="Ernakulam">Ernakulam</option>
+      <option value="Thrissur">Thrissur</option>
+      <option value="Palakkad">Palakkad</option>
+      <option value="Malappuram">Malappuram</option>
+      <option value="Kozhikode">Kozhikode</option>
+      <option value="Wayanad">Wayanad</option>
+      <option value="Kannur">Kannur</option>v
+      <option value="Kasargod">Kasargod</option>
+  </select><br><br>
+AGE : <input type="number" placeholder="Enter your age" name="age"> &nbsp;<br>
+        <br>
+<br>
+       &nbsp; PHOTO : <input type="file" name="photo"><br><br>
+    <button>ADD</button>
+        <br>
+   <a href="home" style="text-decoration:none;color:red">Goto Home</a>
+</form>
+</center>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

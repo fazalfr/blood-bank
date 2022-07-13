@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>notification</title>
+</head>
+<body>
+<center>
+    <form action="dltmsg" method="post">
+    {% csrf_token %}
+    <h1> NOTIFICATIONS </h1>
+    <hr>
+    <br>
+{% for i in data %}
+<h2>group : {{i.group}} <br>
+    msg : {{i.message}} <br>
+    Location : {{i.hospital}}
+    {{i.district}}
+
+</h2>
+   <h6>
+       Message Date : {{i.date}} {{i.month}} &nbsp; {{i.year}}<br>
+</h6>
+    <button>DELETE</button>
+<hr>
+
+{% endfor %}
+    </form>
+</center>
+</body>
+</html>

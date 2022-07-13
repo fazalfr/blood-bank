@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 14px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 18%;
+  font-size: 13px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+<form action="#" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<h2 style="text-align:center">User Profile</h2>
+{% for i in data %}
+<div class="card">
+<img src="{{i.photo.url}}"  style="width:100%">
+  <p class="title">Name : {{i.username}}</p>
+  <p>Phone number : {{i.number}}</p>
+    Age : {{i.age}}<br>
+    District : {{i.district}}<br>
+    Blood : {{i.group}}
+
+</div>
+{% endfor %}
+</form>
+<br>
+<center>
+<a href="edit"><button>EDIT YOUR PROFILE</button></a>&nbsp;&nbsp;
+  <a href="home"><button>LOGOUT</button></a>
+  </center>
+</body>
+</html>
